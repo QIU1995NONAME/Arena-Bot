@@ -1,0 +1,58 @@
+[
+  {
+    "messages": [
+      "TestMessage1"
+    ],
+    "simpleReplies": [
+      "TestReply1"
+    ]
+  },
+  {
+    "messages": [
+      "TestMessage2"
+    ],
+    "replies": [
+      {
+        "replyText": "TestReply2"
+      },
+      {
+        "replyText": "TestReply2",
+        "specials": []
+      },
+      {
+        "replyText": "TestReply2",
+        "atSender": false
+      },
+      {
+        "replyText": "TestReply2",
+        "imageFile": ""
+      }
+    ]
+  },
+  {
+    "messages": [
+      "TestMessage3"
+    ],
+    "simpleReplies": [
+      "TestReply3"
+    ],
+    "replies": [],
+    "unexpectedString": "",
+    "unexpectedObject": {},
+    "unexpectedArray": []
+  },
+  {
+    "messages": [
+      "TestMessage4"
+    ],
+    "simpleReplies": [],
+    "replies": [
+      {
+        "replyText": "TestReply4"
+      }
+    ],
+    "unexpectedString": "",
+    "unexpectedObject": {},
+    "unexpectedArray": []
+  }
+]
