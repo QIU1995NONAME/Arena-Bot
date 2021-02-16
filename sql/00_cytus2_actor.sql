@@ -10,10 +10,14 @@ create table `cytus2-actor`
 alter table `cytus2-actor`
     add primary key (id);
 
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Alice', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Aroma', '[]');
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Bobo', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Cherry', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('ConneR', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Crystal PuNK', '["CP"]');
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Graff.J', '[]');
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Hans', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Ivy', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('JOE', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Kizuna AI', '["爱酱", "绊爱", "AI"]');
