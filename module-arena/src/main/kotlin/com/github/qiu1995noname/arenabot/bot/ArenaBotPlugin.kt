@@ -47,6 +47,7 @@ object ArenaBotPlugin : KotlinPlugin(
 
     override fun onEnable() {
         ArenaBotConfig.reload()
+        ArenaBotData.reload()
         Cytus2Actors.loadActors(connWrapper.getActors())
         GlobalEventChannel.registerListenerHost(ArenaBotEventHandlers)
         CommandSongSelect.register()

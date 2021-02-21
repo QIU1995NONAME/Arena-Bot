@@ -1,7 +1,7 @@
 package com.github.qiu1995noname.arenabot.bot.command
 
+import com.github.qiu1995noname.arenabot.bot.ArenaBotData
 import com.github.qiu1995noname.arenabot.bot.ArenaBotPlugin
-import com.github.qiu1995noname.arenabot.utils.ArenaManager
 import com.github.qiu1995noname.arenabot.utils.ConnWrapperExt.selectCytus2Level
 import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
 import net.mamoe.mirai.console.command.CommandSender
@@ -35,7 +35,7 @@ object CommandSongSelect : RawCommand(
                 if (this !is MemberCommandSender) {
                     sendMessage(level.toStringWithNewLine() + unparsed)
                 } else {
-                    val tag = ArenaManager.trySetLevel(this.group.id, this.user, level)
+                    val tag = ArenaBotData.trySetLevel(this.bot, this.group.id, this.user.id, level)
                     sendMessage(tag + "\n" + level.toStringWithNewLine() + unparsed)
                 }
             }

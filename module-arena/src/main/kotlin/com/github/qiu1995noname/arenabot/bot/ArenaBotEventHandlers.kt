@@ -1,6 +1,5 @@
 package com.github.qiu1995noname.arenabot.bot
 
-import com.github.qiu1995noname.arenabot.utils.ArenaManager
 import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
 import net.mamoe.mirai.event.EventHandler
 import net.mamoe.mirai.event.ListenerHost
@@ -28,9 +27,10 @@ object ArenaBotEventHandlers : ListenerHost {
             while (score > 100.0000001) {
                 score /= 10
             }
-            ArenaManager.uploadScore(event.group.id, event.sender, score).filter { it.isNotEmpty() }.forEach {
-                event.subject.sendMessage(it)
-            }
+            ArenaBotData.uploadScore(event.bot, event.group.id, event.sender.id, score).filter { it.isNotEmpty() }
+                .forEach {
+                    event.subject.sendMessage(it)
+                }
         }
     }
 }

@@ -1,6 +1,9 @@
 package com.github.qiu1995noname.arenabot.entity
 
-class Cytus2Level(
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Cytus2Level(
     val name: String,
     val actor: String,
     val difficulty: Int,
@@ -26,7 +29,7 @@ class Cytus2Level(
         return "Cytus2 Level: { " +
                 "name: '$name', " +
                 "actor: '$actor', " +
-                "difficulty: '${difficulty * 1e-2}', " +
+                String.format("difficulty: '%.2f', ", difficulty * 1e-2) +
                 "type: '$type' " +
                 "free?: $free" +
                 "deleted?: $deleted" +
@@ -37,7 +40,7 @@ class Cytus2Level(
         return "Cytus2 Level: \n" +
                 "  曲名: '$name'\n" +
                 "  角色: '$actor'\n" +
-                "  难度: '${difficulty * 1e-2}'\n" +
+                String.format("  难度: '%.2f'\n", difficulty * 1e-2) +
                 "  类型: '$type' \n" +
                 (if (free && type != Type.GLITCH) "  [免费] \n" else "") +
                 (if (deleted) "  [已删除] \n" else "")
