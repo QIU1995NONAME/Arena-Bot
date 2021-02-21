@@ -11,3 +11,6 @@ docker run \
   -d mariadb:10 \
   --character-set-server=utf8mb4 \
   --collation-server=utf8mb4_unicode_ci
+
+# sudo mysql "arena-data-dev" < ./00_cytus2_actor.sql
+# sudo mysql "arena-data-dev" < ./01_cytus2_level.sql
