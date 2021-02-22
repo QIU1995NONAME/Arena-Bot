@@ -21,9 +21,9 @@ dependencies {
     api("org.jetbrains:annotations:+")
 
     // Mirai
-    runtimeOnly(mirai("core-jvm", Versions.Mirai.core))
-    runtimeOnly(mirai("core-utils-jvm", Versions.Mirai.core))
-    api(mirai("core-api-jvm", Versions.Mirai.core))
+    runtimeOnly(mirai("core", Versions.Mirai.core))
+    runtimeOnly(mirai("core-utils", Versions.Mirai.core))
+    api(mirai("core-api", Versions.Mirai.core))
     api(mirai("console", Versions.Mirai.console))
     runtimeOnly(mirai("console-terminal", Versions.Mirai.console))
 }
