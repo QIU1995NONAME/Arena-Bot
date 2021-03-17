@@ -11,7 +11,7 @@ import net.mamoe.mirai.message.data.MessageChain
 object CommandArena : RawCommand(
     ArenaBotPlugin,
     "arena",
-    "加入竞技", "竞技",
+    "加入竞技", "竞技", "击剑", "开始击剑",
     description = "启动/加入竞技模式",
 ) {
     override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {

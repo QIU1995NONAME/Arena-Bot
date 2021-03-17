@@ -13,7 +13,7 @@ import net.mamoe.mirai.message.data.PlainText
 object CommandSongSelect : RawCommand(
     ArenaBotPlugin,
     "select",
-    "抽歌",
+    "抽歌", "抽鸽",
     description = "抽歌命令",
 ) {
     override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {

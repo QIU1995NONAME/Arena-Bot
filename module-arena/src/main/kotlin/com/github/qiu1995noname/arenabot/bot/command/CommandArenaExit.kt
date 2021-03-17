@@ -11,7 +11,7 @@ import net.mamoe.mirai.message.data.MessageChain
 object CommandArenaExit : RawCommand(
     ArenaBotPlugin,
     "arena-exit",
-    "退出竞技",
+    "退出竞技", "退出击剑",
     description = "退出竞技模式",
 ) {
     override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {
