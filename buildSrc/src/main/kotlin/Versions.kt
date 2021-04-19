@@ -7,7 +7,7 @@ object Versions {
     }
 
     object Mirai {
-        const val core = "2.4.2"
+        const val core = "2.6.4"
         const val console = core
     }
 
