@@ -45,8 +45,8 @@ class Cytus2LevelSelector {
         if (freeOnly) {
             sql += " AND free = 1 AND type != 'GLITCH' "
         }
-        if (!includeDeleted) {
-            sql += " AND deleted = 0 "
+        if (includeDeleted) {
+            sql += " AND deleted = 1 "
         }
         if (actor != null) {
             sql += " AND actor_id = '$actor' "
