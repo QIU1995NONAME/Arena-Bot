@@ -4,7 +4,7 @@ echo "MODIFY 'DATADIR_MARIADB' FIRST AND REMOVE THIS LINE!" && exit 1
 readonly DATADIR_MARIADB="/tmp/mariadb/data"
 ########################################################################################################################
 
-docker run \
+podman run \
   -e MYSQL_RANDOM_ROOT_PASSWORD="yes" \
   -v ${DATADIR_MARIADB}:/var/lib/mysql \
   -p 13306:3306 \

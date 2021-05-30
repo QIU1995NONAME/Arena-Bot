@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker run \
+podman run \
   -e MYSQL_ROOT_PASSWORD="root-dev" \
   -e MYSQL_DATABASE="arena-data-dev" \
   -e MYSQL_USER="arena-bot" \
