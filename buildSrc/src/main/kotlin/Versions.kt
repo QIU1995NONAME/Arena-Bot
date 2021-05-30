@@ -16,5 +16,5 @@ object Versions {
         const val plugin = "0.9.0"
     }
 
-    const val project = "0.1-ROLLING"
+    const val project = "0.1.6"
 }
