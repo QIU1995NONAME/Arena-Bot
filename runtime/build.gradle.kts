@@ -15,7 +15,7 @@ dependencies {
     api(kotlinx("serialization-json", Versions.Kotlin.serialization))
 
     // MariaDB
-    runtimeOnly("org.mariadb.jdbc:mariadb-java-client:+")
+    runtimeOnly("org.mariadb.jdbc:mariadb-java-client:2.+")
 
     // Jetbrains Annotations
     api("org.jetbrains:annotations:+")
