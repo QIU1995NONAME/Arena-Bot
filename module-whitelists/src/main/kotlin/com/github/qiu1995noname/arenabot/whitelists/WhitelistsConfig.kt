@@ -4,40 +4,32 @@ import kotlinx.serialization.Serializable
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.ConsoleCommandSender
 import net.mamoe.mirai.console.data.AutoSavePluginConfig
+import net.mamoe.mirai.console.data.ValueDescription
 import net.mamoe.mirai.console.data.value
 import net.mamoe.mirai.contact.NormalMember
 import net.mamoe.mirai.contact.User
 import net.mamoe.mirai.containsFriend
 
 object WhitelistsConfig : AutoSavePluginConfig(
-    WhitelistsConfig::class.simpleName!!
+        WhitelistsConfig::class.simpleName!!
 ) {
-    /**
-     * 名单列表
-     * @param specialUsers   被特殊允许的用户名单
-     * @param allowedGroups  群组白名单
-     * @param bannedUsers    用户黑名单
-     */
     @Serializable
     data class GrantedSets(
-        val specialUsers: HashSet<Long> = HashSet(),
-        val allowedGroups: HashSet<Long> = HashSet(),
-        val bannedUsers: HashSet<Long> = HashSet(),
+            @ValueDescription("被特殊允许的用户名单")
+            val specialUsers: HashSet<Long> = HashSet(),
+            @ValueDescription("群组白名单")
+            val allowedGroups: HashSet<Long> = HashSet(setOf(706079559L)),
+            @ValueDescription("用户黑名单")
+            val bannedUsers: HashSet<Long> = HashSet(),
     )
 
-    /**
-     * 所有者 拥有名单的控制权
-     */
+    @ValueDescription("所有者 拥有名单的控制权")
     private val owner by value(292529702L)
 
-    /**
-     * 直接允许好友
-     */
+    @ValueDescription("是否直接允许好友")
     private val allowFriend by value(true)
 
-    /**
-     * 名单列表
-     */
+    @ValueDescription("名单列表")
     val grantedSets by value<GrantedSets>()
 
     /**
