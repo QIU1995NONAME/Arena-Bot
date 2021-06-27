@@ -1,5 +1,7 @@
 package com.github.qiu1995noname.arenabot.autoreply.internal
 
+import kotlinx.serialization.Serializable
+
 /**
  * 用来描述一条 回复配置 的类
  *
@@ -9,6 +11,7 @@ package com.github.qiu1995noname.arenabot.autoreply.internal
  * @param imageFile 此条回复附带一张图，缺省为无图
  * @param voiceFile 此条回复附带音频，缺省为无音频
  */
+@Serializable
 internal data class ReplyData(
         val replyText: String,
         val specials: HashSet<Long> = HashSet(),

@@ -1,6 +1,7 @@
 package com.github.qiu1995noname.arenabot.autoreply.internal
 
 import kotlinx.serialization.Contextual
+import kotlinx.serialization.Serializable
 
 /**
  * 用来描述一份"回复配置", 即：当收到xxx时，回复yyy
@@ -9,6 +10,7 @@ import kotlinx.serialization.Contextual
  * @param simpleReplies  仅字符串的回复，没有特殊功能
  * @param replies        功能比较全的回复
  */
+@Serializable
 internal data class ReplyConfig(
         val messages: HashSet<String>,
         val simpleReplies: HashSet<String> = HashSet(),
