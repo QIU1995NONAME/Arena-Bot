@@ -5,17 +5,19 @@ import kotlinx.serialization.Serializable
 /**
  * 用来描述一条 回复配置 的类
  *
- * @param replyText 一条文字回复
- * @param specials  QQ号组，代表此条回复是针对这一组人的
- * @param atSender  此条回复是否需要 At 发送者。缺省为 false
- * @param imageFile 此条回复附带一张图，缺省为无图
- * @param voiceFile 此条回复附带音频，缺省为无音频
+ * @param replyText    一条文字回复
+ * @param specials     QQ号组，代表此条回复是针对这一组人的
+ * @param atSender     此条回复是否需要 At 发送者。缺省为 false
+ * @param atOthers     仅群组生效 此条回复是否需要 At 其他人。缺省为空
+ * @param imageFile    此条回复附带一张图，缺省为无图
+ * @param voiceFile    此条回复附带音频，缺省为无音频
  */
 @Serializable
 internal data class ReplyData(
         val replyText: String,
         val specials: HashSet<Long> = HashSet(),
         val atSender: Boolean = false,
+        val atOthers: HashSet<Long> = HashSet(),
         val imageFile: String = "",
         val voiceFile: String = "",
 ) {
@@ -34,6 +36,9 @@ internal data class ReplyData(
         )
         this.specials.forEach {
             res.specials.add(it)
+        }
+        this.atOthers.forEach {
+            res.atOthers.add(it)
         }
         return res
     }

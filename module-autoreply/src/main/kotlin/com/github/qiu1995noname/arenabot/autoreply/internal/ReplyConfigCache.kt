@@ -2,7 +2,9 @@ package com.github.qiu1995noname.arenabot.autoreply.internal
 
 import com.github.qiu1995noname.arenabot.autoreply.AutoReplyCache
 import com.github.qiu1995noname.arenabot.autoreply.AutoReplyPlugin
+import net.mamoe.mirai.contact.Group
 import net.mamoe.mirai.contact.User
+import net.mamoe.mirai.contact.getMember
 import java.io.File
 import java.security.MessageDigest
 import java.util.concurrent.locks.ReentrantReadWriteLock
@@ -101,9 +103,19 @@ internal class ReplyConfigCache(
         return true
     }
 
-    fun getReply(msg: String, user: User): ReplyData? = rwLock.read {
+    fun getReply(msg: String, user: User, group: Group?): ReplyData? = rwLock.read {
         val idx = indexMessageConfig[msg] ?: return null
         val config = configList[idx]
+        if (config.needMembers.isNotEmpty()) {
+            if (group == null) {
+                return null
+            }
+            config.needMembers.forEach {
+                if (group.getMember(it) == null) {
+                    return null
+                }
+            }
+        }
         if (config.specialReplies.containsKey(user.id)) {
             return config.specialReplies[user.id]!!.random()
         } else if (config.specialReplies.containsKey(AutoReplyCache.kDefaultSpecial)) {

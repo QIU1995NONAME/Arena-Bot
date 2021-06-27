@@ -7,12 +7,14 @@ import kotlinx.serialization.Serializable
  * 用来描述一份"回复配置", 即：当收到xxx时，回复yyy
  *
  * @param messages       当接收到这些消息的时候
+ * @param needMembers    仅群组生效 是否需要其它群原存在。缺省为空
  * @param simpleReplies  仅字符串的回复，没有特殊功能
  * @param replies        功能比较全的回复
  */
 @Serializable
 internal data class ReplyConfig(
         val messages: HashSet<String>,
+        val needMembers: HashSet<Long> = HashSet(),
         val simpleReplies: HashSet<String> = HashSet(),
         val replies: ArrayList<@Contextual ReplyData> = ArrayList(),
 ) {
@@ -28,6 +30,9 @@ internal data class ReplyConfig(
         val res = ReplyConfig(HashSet())
         this.messages.forEach {
             res.messages.add(it)
+        }
+        this.needMembers.forEach {
+            res.needMembers.add(it)
         }
         this.simpleReplies.forEach {
             res.simpleReplies.add(it)

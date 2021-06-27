@@ -4,10 +4,7 @@ import com.github.qiu1995noname.arenabot.autoreply.internal.ReplyConfig
 import com.github.qiu1995noname.arenabot.autoreply.internal.ReplyConfigCache
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
-import net.mamoe.mirai.contact.Contact
-import net.mamoe.mirai.contact.Group
-import net.mamoe.mirai.contact.Member
-import net.mamoe.mirai.contact.User
+import net.mamoe.mirai.contact.*
 import net.mamoe.mirai.message.data.At
 import net.mamoe.mirai.message.data.MessageChain
 import net.mamoe.mirai.message.data.MessageChainBuilder
@@ -21,7 +18,9 @@ object AutoReplyCache {
     private val cache = ReplyConfigCache(tempMode = false)
 
     suspend fun getReply(msg: String, user: User, contact: Contact): MessageChain {
-        val reply = cache.getReply(msg, user)
+        val reply = cache.getReply(msg, user,
+                if (contact is Group) contact else null
+        )
         val builder = MessageChainBuilder()
         if (reply == null) {
             return builder.build()
@@ -29,6 +28,14 @@ object AutoReplyCache {
         if (reply.atSender && user is Member) {
             builder.add(At(user))
             builder.add("\n")
+        }
+        if (contact is Group) {
+            reply.atOthers.forEach {
+                val mem = contact.getMember(it)
+                if (mem != null) {
+                    builder.add(At(mem))
+                }
+            }
         }
         builder.add(reply.replyText)
         if (reply.bufferedImage != null) {

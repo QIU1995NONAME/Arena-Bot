@@ -41,6 +41,14 @@ object AutoReplyEventHandlers : ListenerHost {
         }
         val msg = event.message[1].toString()
 
+        if (msg == AutoReplyConfig.nudgedTag) {
+            return
+        }
+        AutoReplyConfig.configSets.blockPrefix.forEach {
+            if (msg.startsWith(it)) {
+                return
+            }
+        }
         WhitelistsConfig.withCheck(event.sender, false) {
             val replyMessage = AutoReplyCache.getReply(msg, event.sender, event.subject)
             if (!replyMessage.isEmpty()) {
@@ -51,9 +59,14 @@ object AutoReplyEventHandlers : ListenerHost {
 
     @Suppress("unused")
     @EventHandler
-    fun onCustomChannel(event: CustomChannelGroupMemberEvent) {
+    suspend fun onCustomChannel(event: CustomChannelGroupMemberEvent) {
+        // 这里没有进行权限配置
         AutoReplyPlugin.logger.verbose(
                 "[CustomChannel] \"${event.channel}\" in ${event.group} by ${event.user}"
         )
+        val replyMessage = AutoReplyCache.getReply(event.channel, event.user, event.group)
+        if (!replyMessage.isEmpty()) {
+            event.group.sendMessage(replyMessage)
+        }
     }
 }

@@ -11,13 +11,24 @@
     "messages": [
       "TestMessage2"
     ],
+    "needMembers": [],
     "replies": [
+      {
+        "replyText": "TestReply2",
+        "atSender": false,
+        "specials": [],
+        "atOthers": []
+      },
       {
         "replyText": "TestReply2"
       },
       {
         "replyText": "TestReply2",
         "specials": []
+      },
+      {
+        "replyText": "TestReply2",
+        "atOthers": []
       },
       {
         "replyText": "TestReply2",
