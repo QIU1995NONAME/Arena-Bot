@@ -246,6 +246,8 @@ internal object ArenaBotData : AutoSavePluginData("ArenaBotData") {
 
     /**
      * 加入竞技
+     *
+     * TODO 重构此处的逻辑，不直接返回提示词，而是返回状态码
      */
     fun createOrJoin(bot: Bot, arenaId: Long, userId: Long): String {
         bot.isOnline // UNUSED

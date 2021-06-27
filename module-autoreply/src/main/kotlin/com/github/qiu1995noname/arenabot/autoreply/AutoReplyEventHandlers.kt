@@ -1,6 +1,7 @@
 package com.github.qiu1995noname.arenabot.autoreply
 
 import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.event.CustomChannelGroupMemberEvent
 import net.mamoe.mirai.contact.User
 import net.mamoe.mirai.event.EventHandler
 import net.mamoe.mirai.event.ListenerHost
@@ -46,5 +47,13 @@ object AutoReplyEventHandlers : ListenerHost {
                 event.subject.sendMessage(replyMessage)
             }
         }
+    }
+
+    @Suppress("unused")
+    @EventHandler
+    fun onCustomChannel(event: CustomChannelGroupMemberEvent) {
+        AutoReplyPlugin.logger.verbose(
+                "[CustomChannel] \"${event.channel}\" in ${event.group} by ${event.user}"
+        )
     }
 }
