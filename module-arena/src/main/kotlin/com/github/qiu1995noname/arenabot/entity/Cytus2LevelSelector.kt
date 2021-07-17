@@ -66,15 +66,34 @@ class Cytus2LevelSelector {
             // 7 9 12.5
             maxDifficulty = (str.toDouble() * 100 + 50).toInt()
             minDifficulty = maxDifficulty - 100
-        } else if (Pattern.matches("HARD", str.toUpperCase()) || Pattern.matches("困难", str)) {
+        } else if (
+                Pattern.matches("HARD", str.toUpperCase()) ||
+                Pattern.matches("困难", str) ||
+                Pattern.matches("困難", str)
+        ) {
             type = Cytus2Level.Type.HARD
-        } else if (Pattern.matches("CHAOS", str.toUpperCase()) || Pattern.matches("混沌", str)) {
+        } else if (
+                Pattern.matches("CHAOS", str.toUpperCase()) ||
+                Pattern.matches("混沌", str)
+        ) {
             type = Cytus2Level.Type.CHAOS
-        } else if (Pattern.matches("GLITCH", str.toUpperCase()) || Pattern.matches("混乱", str)) {
+        } else if (
+                Pattern.matches("GLITCH", str.toUpperCase()) ||
+                Pattern.matches("混乱", str) ||
+                Pattern.matches("混亂", str)
+        ) {
             type = Cytus2Level.Type.GLITCH
-        } else if (Pattern.matches("FREE", str.toUpperCase()) || Pattern.matches("免费", str)) {
+        } else if (
+                Pattern.matches("FREE", str.toUpperCase()) ||
+                Pattern.matches("免费", str) ||
+                Pattern.matches("免費", str)
+        ) {
             freeOnly = true
-        } else if (Pattern.matches("DELETED", str.toUpperCase()) || Pattern.matches("已移除", str)) {
+        } else if (
+                Pattern.matches("DELETED", str.toUpperCase()) ||
+                Pattern.matches("已移除", str) ||
+                Pattern.matches("已刪除", str)
+        ) {
             includeDeleted = true
         } else if (Cytus2Actors.getActorName(str) != null) {
             actor = Cytus2Actors.getActorName(str)

@@ -13,7 +13,7 @@ import net.mamoe.mirai.message.data.MessageChain
 object CommandArenaShutdown : RawCommand(
         ArenaBotPlugin,
         "arena-shutdown",
-        "强制退出", "强制结束",
+        "强制退出", "强制结束", "強制退出", "強制結束",
 ) {
     override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {
         if (this !is MemberCommandSender) {
