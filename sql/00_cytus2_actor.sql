@@ -18,6 +18,7 @@ INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('ConneR', '["老师"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Crystal PuNK', '["CP"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Graff.J', '["长颈鹿","肠紧鹿"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Hans', '[]');
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Ilka', '["il"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Ivy', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('JOE', '["细菌王"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Kizuna AI', '["爱酱", "绊爱", "AI"]');

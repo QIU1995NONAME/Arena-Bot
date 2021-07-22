@@ -19,7 +19,8 @@ create table `cytus2-level`
 
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('100sec Cat Dreams', 'NEKO#ΦωΦ', 700, 1500, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('3:00 a.m.', 'Vanessa', 700, 1180, null, 0, 1, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('99 Glooms', 'Ivy', 700, 1380, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('3G0', 'Ilka', 700, 1200, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('99 Glooms', 'Ivy', 700, 1360, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('彩', 'Rin', 900, 1520, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('超常マイマイン', 'Graff.J', 800, 1300, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('都市の呼吸', 'Alice', 700, 1260, null, 0, 0, '[]');
@@ -46,6 +47,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Accelerator', 'Nora', 700, 1360, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Accelerator', 'ROBO_Head', 700, 1380, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('AIAIAI (feat. 中田ヤスタカ)', 'Kizuna AI', 800, 1160, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Alb', 'Ilka', 800, 1400, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Alexandrite', 'Ivy', 700, 1400, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Alterna Pt.1 -Cosmogony-', 'NEKO#ΦωΦ', 500, 1180, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Amenemhat', 'Sagar', 800, 1360, null, 0, 0, '[]');
@@ -67,7 +69,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Baptism of Fire (CliqTrack remix)', 'PAFF', 700, 1200, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Bass Music', 'JOE', 800, 1340, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Bastard of Hardcore', 'Nora', 700, 1320, 1400, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Beautiful Lie', 'Aroma', 600, 1100, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Beautiful Lie', 'Aroma', 600, 1120, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Better than your error system', 'NEKO#ΦωΦ', 800, 1320, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Biotonic', 'Ivy', 700, 1300, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Blackest Luxury Car', 'Graff.J', 700, 1220, null, 0, 0, '[]');
@@ -111,6 +113,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Claim the Game', 'ROBO_Head', 700, 1200, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('CODE NAME: GAMMA', 'NEKO#ΦωΦ', 900, 1480, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('CODE NAME: SIGMA', 'Ivy', 900, 1460, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('CODE:RED', 'Ilka', 900, 1420, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('cold', 'ROBO_Head', 700, 1140, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Collide', 'Crystal PuNK', 700, 1200, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('concentric circles', 'Xenon', 700, 1220, null, 0, 0, '[]');
@@ -148,6 +151,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Duality', 'Vanessa', 800, 1140, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('dynamo', 'Graff.J', 800, 1500, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Effervesce', 'Crystal PuNK', 600, 1320, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Elysian Volitation', 'Ilka', 1000, 1480, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Elysium', 'Sagar', 600, 1220, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('EMber', 'ROBO_Head', 700, 1220, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('End of fireworks', 'Bobo', 600, 1100, null, 0, 0, '[]');
@@ -156,7 +160,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Eternity', 'Nora', 700, 1120, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('extinguisher', 'NEKO#ΦωΦ', 700, 1100, 1240, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Fade Into The Darkness', 'ROBO_Head', 900, 1380, null, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Fading Star', 'Graff.J', 700, 1140, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Fading Star', 'Graff.J', 700, 1160, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Familiar Craze', 'Crystal PuNK', 800, 1320, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Favorites', 'PAFF', 500, 1100, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Fight Another Day (Andy Tunstall remix)', 'PAFF', 600, 1020, null, 0, 1, '[]');
@@ -195,6 +199,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Hello Pinky', 'Graff.J', 700, 1140, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Hesitant Blade', 'Graff.J', 500, 1220, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Higher and Higher', 'JOE', 600, 1360, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('History DstrØyeR', 'Ilka', 900, 1520, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Homebound Train & Moving Thoughts', 'Ivy', 500, 900, null, 1, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Hop Step Adventure☆', 'Graff.J', 700, 1340, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('hunted', 'Cherry', 600, 1300, null, 0, 0, '[]');
@@ -214,13 +219,16 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Imprint', 'Crystal PuNK', 800, 1340, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Imprinting', 'ConneR', 800, 1300, 1520, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Inari', 'Rin', 600, 1040, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Incyde', 'Vanessa', 800, 1540, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('INSPION', 'Xenon', 900, 1320, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Inspiration', 'PAFF', 500, 1040, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Installation[表]', 'Vanessa', 400, 940, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Installation[里]', 'Vanessa', 600, 1260, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Instinct', 'ConneR', 800, 1160, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Interstellar Experience', 'Graff.J', 800, 1440, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('IOLITE-SUNSTONE', 'Xenon', 700, 1180, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('I Wish You Were Mine', 'PAFF', 700, 1220, null, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Jakarta PROGRESSION', 'Nora', 800, 1460, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Jakarta PROGRESSION', 'Nora', 800, 1440, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Jazzy Glitch Machine', 'ROBO_Head', 800, 1380, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Juicy Gossip', 'JOE', 700, 1180, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('KANATA', 'PAFF', 600, 900, 1180, 0, 1, '[]');
@@ -232,6 +240,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Legacy', 'Sagar', 700, 1340, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('LEVEL4', 'Cherry', 700, 1300, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Leviathan', 'Hans', 900, 1320, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Levolution', 'Ilka', 700, 1180, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Libera Me', 'Ivy', 800, 1380, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Liberation', 'NEKO#ΦωΦ', 900, 1400, 1580, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Lifill', 'Graff.J', 700, 1220, null, 0, 1, '[]');
@@ -316,24 +325,28 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Ra', 'Vanessa', 800, 1280, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Realize', 'Cherry', 800, 1220, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('REBELLIA', 'Graff.J', 700, 1400, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rebellion Trigger', 'Ilka', 900, 1480, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('REBELLIUM', 'ConneR', 900, 1460, null, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rebirth', 'NEKO#ΦωΦ', 700, 1180, 1540, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rebirth', 'NEKO#ΦωΦ', 700, 1160, 1540, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Re:Boost', 'PAFF', 500, 1140, 1320, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Recall', 'PAFF', 600, 920, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Red Five', 'Ivy', 700, 1380, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Re:incRnaTiØN ～夕焼ケ世界ノ決別ヲ～', 'Neko', 900, 1600, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rei', 'NEKO#ΦωΦ', 700, 1220, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('REmorse', 'NEKO#ΦωΦ', 900, 1460, null, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Reset', 'Ivy', 700, 1220, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Reset', 'Ivy', 700, 1200, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('RESET MAN', 'Graff.J', 700, 1220, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Restriction', 'ROBO_Head', 700, 1080, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Resurrection', 'NEKO#ΦωΦ', 800, 1200, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Re:The END -再-', 'Ilka', 900, 1580, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('RETRIEVE', 'Cherry', 700, 1160, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Return of the Lamp', 'Sagar', 800, 1360, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Return', 'Xenon', 600, 1100, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Re:VeLΔTiØN ～光道ト破壞ノ雙白翼～', 'NEKO#ΦωΦ', 900, 1440, 1620, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rhuzerv', 'Hans', 800, 1480, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('R.I.P.', 'Neko', 900, 1440, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Risoluto[表]', 'Vanessa', 700, 1300, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Risoluto[里]', 'Vanessa', 700, 1360, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Rosa Rubus', 'Vanessa', 600, 1140, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Ruins in the Mirage', 'Hans', 600, 1120, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Run Go Run', 'Hans', 700, 1200, null, 0, 0, '[]');
@@ -351,6 +364,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('SHIRO', 'ROBO_Head', 600, 1300, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Sickest City', 'ROBO_Head', 700, 1520, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Silent Voice', 'Graff.J', 600, 1260, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Silver Lotus', 'Ilka', 600, 1140, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Sleeping Beast', 'PAFF', 700, 940, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Snow Blossom', 'Bobo', 800, 1220, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('So In Love', 'PAFF', 600, 1160, null, 0, 0, '[]');
@@ -385,8 +399,10 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The 89''s Momentum', 'Graff.J', 700, 1280, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The 90''s Decision', 'Graff.J', 800, 1380, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The Beautiful Moonlight', 'Alice', 700, 940, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('THE BEGINNING', 'Vanessa', 500, 1200, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The breath of the soul', 'Bobo', 700, 1360, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The Cross (feat. Silvia Su)', 'Crystal PuNK', 600, 1240, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The End Years', 'Vanessa', 600, 1300, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The Grand Debate', 'Rin', 700, 1260, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The Siege', 'Rin', 800, 1260, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('The Spark', 'NEKO#ΦωΦ', 800, 1200, null, 0, 1, '[]');
@@ -399,7 +415,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('tondari-hanetari', 'ConneR', 800, 1320, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('To next page', 'Alice', 800, 1220, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('To the Light', 'Xenon', 800, 1280, null, 0, 0, '[]');
-INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('tRinity saga', 'Bobo', 900, 1460, null, 0, 1, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('tRinity saga', 'Bobo', 900, 1480, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('TSUBAKI', 'Bobo', 700, 1280, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Tsukiyura', 'Graff.J', 800, 1360, null, 0, 1, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('tundra', 'ROBO_Head', 800, 1260, null, 0, 0, '[]');
@@ -415,6 +431,7 @@ INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, d
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Utopiosphere', 'Alice', 700, 1020, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('velkinta feat. Cikado & A-Tse', 'Crystal PuNK', 600, 1220, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Venus di Ujung Jari', 'Miku', 500, 760, null, 0, 0, '[]');
+INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Victims of Will', 'Ilka', 600, 1300, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('Violet', 'Xenon', 700, 1500, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('ViRUS', 'ROBO_Head', 800, 1180, null, 0, 0, '[]');
 INSERT INTO `cytus2-level` (name, actor_id, difficulty_hard, difficulty_chaos, difficulty_glitch, deleted, free, nicks) VALUES ('VIS::CRACKED', 'Ivy', 900, 1580, null, 0, 0, '[]');
