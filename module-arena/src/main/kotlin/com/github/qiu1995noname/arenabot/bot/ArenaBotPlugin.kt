@@ -55,6 +55,7 @@ object ArenaBotPlugin : KotlinPlugin(
         CommandArenaStatus.register()
         CommandArenaShutdown.register()
         CommandArenaExit.register()
+        CommandCyc.register()
     }
 
     override fun onDisable() {
@@ -63,5 +64,6 @@ object ArenaBotPlugin : KotlinPlugin(
         CommandArenaStatus.unregister()
         CommandArenaShutdown.unregister()
         CommandArenaExit.unregister()
+        CommandCyc.unregister()
     }
 }
