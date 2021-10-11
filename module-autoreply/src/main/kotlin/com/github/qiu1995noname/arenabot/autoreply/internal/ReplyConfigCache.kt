@@ -34,6 +34,10 @@ internal class ReplyConfigCache(
         }
     }
 
+    fun clear() = rwLock.write {
+        configList.clear()
+    }
+
     fun moveFrom(cache: ReplyConfigCache) = rwLock.write {
         if (tempMode || !cache.tempMode) {
             throw IllegalStateException("只可以从 temp 模式的 cache 移动到非 temp 模式的 cache")

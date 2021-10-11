@@ -68,36 +68,34 @@ object WhitelistsConfig : AutoSavePluginConfig(
     }
 
     /**
-     * 校验命令发起者
+     * 校验用户
      *
-     * @param sender    某个发起者
      * @param onlyOwner 是否仅 Owner 有权限
      */
-    private fun checkCommandSender(sender: CommandSender, onlyOwner: Boolean = false): Boolean {
+    fun User.check(onlyOwner: Boolean = false) {
+        val caller = Thread.currentThread().stackTrace[2].toString()
+        if (!checkUser(this, onlyOwner)) {
+            val info = "Access Deny: $this : $caller"
+            WhitelistsPlugin.logger.verbose(info)
+            throw WhitelistsCheckException(info)
+        }
+    }
+
+    /**
+     * 校验命令发起者
+     *
+     * @param onlyOwner 是否仅 Owner 有权限
+     */
+    fun CommandSender.check(onlyOwner: Boolean = false) {
         // 控制台拥有最高权限
-        if (sender is ConsoleCommandSender) {
-            return true
+        if (this is ConsoleCommandSender) {
+            return
         }
-        return checkUser(sender.user!!, onlyOwner)
-    }
-
-    suspend fun <T> withCheck(sender: CommandSender, onlyOwner: Boolean = false, action: suspend () -> T): T {
         val caller = Thread.currentThread().stackTrace[2].toString()
-        if (!checkCommandSender(sender, onlyOwner)) {
-            val info = "Access Deny: ${sender.user} @ ${sender.subject} : $caller"
+        if (!checkUser(this.user!!, onlyOwner)) {
+            val info = "Access Deny: ${this.user!!} : $caller"
             WhitelistsPlugin.logger.verbose(info)
             throw WhitelistsCheckException(info)
         }
-        return action()
-    }
-
-    suspend fun <T> withCheck(user: User, onlyOwner: Boolean = false, action: suspend () -> T): T {
-        val caller = Thread.currentThread().stackTrace[2].toString()
-        if (!checkUser(user, onlyOwner)) {
-            val info = "Access Deny: $user : $caller"
-            WhitelistsPlugin.logger.verbose(info)
-            throw WhitelistsCheckException(info)
-        }
-        return action()
     }
 }

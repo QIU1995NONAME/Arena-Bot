@@ -1,6 +1,6 @@
 package com.github.qiu1995noname.arenabot.autoreply
 
-import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig.check
 import com.github.qiu1995noname.arenabot.whitelists.event.CustomChannelGroupMemberEvent
 import net.mamoe.mirai.contact.User
 import net.mamoe.mirai.event.EventHandler
@@ -22,11 +22,10 @@ object AutoReplyEventHandlers : ListenerHost {
         if (from !is User) {
             return
         }
-        WhitelistsConfig.withCheck(from, false) {
-            val reply = AutoReplyCache.getReply(AutoReplyConfig.nudgedTag, from, event.subject)
-            if (!reply.isEmpty()) {
-                event.subject.sendMessage(reply)
-            }
+        from.check(false)
+        val reply = AutoReplyCache.getReply(AutoReplyConfig.nudgedTag, from, event.subject)
+        if (!reply.isEmpty()) {
+            event.subject.sendMessage(reply)
         }
     }
 
@@ -49,11 +48,10 @@ object AutoReplyEventHandlers : ListenerHost {
                 return
             }
         }
-        WhitelistsConfig.withCheck(event.sender, false) {
-            val replyMessage = AutoReplyCache.getReply(msg, event.sender, event.subject)
-            if (!replyMessage.isEmpty()) {
-                event.subject.sendMessage(replyMessage)
-            }
+        event.sender.check(false)
+        val replyMessage = AutoReplyCache.getReply(msg, event.sender, event.subject)
+        if (!replyMessage.isEmpty()) {
+            event.subject.sendMessage(replyMessage)
         }
     }
 

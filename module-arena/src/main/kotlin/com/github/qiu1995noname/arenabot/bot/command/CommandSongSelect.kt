@@ -3,7 +3,7 @@ package com.github.qiu1995noname.arenabot.bot.command
 import com.github.qiu1995noname.arenabot.bot.ArenaBotData
 import com.github.qiu1995noname.arenabot.bot.ArenaBotPlugin
 import com.github.qiu1995noname.arenabot.utils.ConnWrapperExt.selectCytus2Level
-import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig.check
 import com.github.qiu1995noname.arenabot.whitelists.event.CustomChannelGroupMemberEvent
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.MemberCommandSender
@@ -18,7 +18,8 @@ object CommandSongSelect : RawCommand(
         "抽歌", "抽鸽", "抽鴿",
         description = "抽歌命令",
 ) {
-    override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {
+    override suspend fun CommandSender.onCommand(args: MessageChain) {
+        this.check(false)
         try {
             var unparsed = ""
             var actor: String? = null
@@ -48,7 +49,7 @@ object CommandSongSelect : RawCommand(
                     }
                 }
             }
-            return@withCheck
+            return
         } catch (t: Throwable) {
             sendMessage("内部异常 T_T，请报告 BUG")
             ArenaBotPlugin.logger.error(t)

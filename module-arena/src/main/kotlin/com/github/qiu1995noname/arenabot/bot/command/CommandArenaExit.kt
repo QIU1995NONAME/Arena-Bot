@@ -2,7 +2,7 @@ package com.github.qiu1995noname.arenabot.bot.command
 
 import com.github.qiu1995noname.arenabot.bot.ArenaBotData
 import com.github.qiu1995noname.arenabot.bot.ArenaBotPlugin
-import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig.check
 import com.github.qiu1995noname.arenabot.whitelists.event.CustomChannelGroupMemberEvent
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.MemberCommandSender
@@ -16,10 +16,11 @@ object CommandArenaExit : RawCommand(
         "退出竞技", "退出击剑", "退出擊劍", "退出競技",
         description = "退出竞技模式",
 ) {
-    override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {
+    override suspend fun CommandSender.onCommand(args: MessageChain) {
+        this.check(false)
         if (this !is MemberCommandSender) {
             sendMessage("不支持在群外使用此功能")
-            return@withCheck
+            return
         }
         ArenaBotData.exit(this.bot, this.group.id, this.user.id).filter { it.isNotEmpty() }.forEach {
             sendMessage(it)

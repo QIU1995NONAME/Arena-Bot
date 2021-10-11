@@ -1,18 +1,20 @@
 package com.github.qiu1995noname.arenabot.whitelists.command
 
 import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig.check
 import com.github.qiu1995noname.arenabot.whitelists.WhitelistsPlugin
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.CompositeCommand
 
 object CommandManage : CompositeCommand(
-    WhitelistsPlugin,
-    "manage",
-    description = "名单管理命令",
+        WhitelistsPlugin,
+        "manage",
+        description = "名单管理命令",
 ) {
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.special() = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.special() {
+        this.check(true)
         val res = StringBuilder()
         res.append("特殊用户名单\n")
         WhitelistsConfig.grantedSets.specialUsers.forEach {
@@ -23,7 +25,8 @@ object CommandManage : CompositeCommand(
 
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.group() = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.group() {
+        this.check(true)
         val res = StringBuilder()
         res.append("群组白名单\n")
         WhitelistsConfig.grantedSets.allowedGroups.forEach {
@@ -34,7 +37,8 @@ object CommandManage : CompositeCommand(
 
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.user() = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.user() {
+        this.check(true)
         val res = StringBuilder()
         res.append("用户黑名单\n")
         WhitelistsConfig.grantedSets.bannedUsers.forEach {
@@ -45,7 +49,8 @@ object CommandManage : CompositeCommand(
 
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.special(code: Long) = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.special(code: Long) {
+        this.check(true)
         if (code > 0) {
             if (WhitelistsConfig.grantedSets.specialUsers.contains(code)) {
                 sendMessage("用户 $code 已经存在于特殊名单")
@@ -66,7 +71,8 @@ object CommandManage : CompositeCommand(
 
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.group(code: Long) = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.group(code: Long) {
+        this.check(true)
         if (code > 0) {
             if (WhitelistsConfig.grantedSets.allowedGroups.contains(code)) {
                 sendMessage("群 $code 已经存在于白名单")
@@ -87,7 +93,8 @@ object CommandManage : CompositeCommand(
 
     @Suppress("unused")
     @SubCommand
-    suspend fun CommandSender.user(code: Long) = WhitelistsConfig.withCheck(this, true) {
+    suspend fun CommandSender.user(code: Long) {
+        this.check(true)
         if (code > 0) {
             if (!WhitelistsConfig.grantedSets.bannedUsers.contains(code)) {
                 sendMessage("用户 $code 不在黑名单")

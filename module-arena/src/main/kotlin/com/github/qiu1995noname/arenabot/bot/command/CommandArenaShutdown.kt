@@ -2,7 +2,7 @@ package com.github.qiu1995noname.arenabot.bot.command
 
 import com.github.qiu1995noname.arenabot.bot.ArenaBotData
 import com.github.qiu1995noname.arenabot.bot.ArenaBotPlugin
-import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsConfig.check
 import com.github.qiu1995noname.arenabot.whitelists.event.CustomChannelGroupMemberEvent
 import net.mamoe.mirai.console.command.CommandSender
 import net.mamoe.mirai.console.command.MemberCommandSender
@@ -15,10 +15,11 @@ object CommandArenaShutdown : RawCommand(
         "arena-shutdown",
         "强制退出", "强制结束", "強制退出", "強制結束",
 ) {
-    override suspend fun CommandSender.onCommand(args: MessageChain) = WhitelistsConfig.withCheck(this, false) {
+    override suspend fun CommandSender.onCommand(args: MessageChain) {
+        this.check(false)
         if (this !is MemberCommandSender) {
             sendMessage("不支持在群外使用此功能")
-            return@withCheck
+            return
         }
         ArenaBotData.shutdown(this.bot, this.group.id).filter { it.isNotEmpty() }.forEach {
             sendMessage(it)
