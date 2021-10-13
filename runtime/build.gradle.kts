@@ -12,7 +12,9 @@ dependencies {
     runtimeOnly(kotlin("reflect"))
     api(ktor("server-netty"))
     api(ktor("client-cio"))
+    api(ktor("client-okhttp"))
     api(kotlinx("serialization-json", Versions.Kotlin.serialization))
+    api(kotlinx("serialization-protobuf", Versions.Kotlin.serialization))
 
     // MariaDB
     runtimeOnly("org.mariadb.jdbc:mariadb-java-client:2.+")
