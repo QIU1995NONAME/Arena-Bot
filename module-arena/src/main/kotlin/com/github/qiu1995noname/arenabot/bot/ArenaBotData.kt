@@ -16,11 +16,11 @@ import kotlin.concurrent.write
 
 @Serializable
 internal data class ArenaContext(
-    val arenaId: Long,
-    val playing: HashMap<Long, Double> = HashMap(),
-    val prepare: HashSet<Long> = HashSet(),
-    var operateTimeMs: Long = System.currentTimeMillis(),
-    var level: Cytus2Level? = null
+        val arenaId: Long,
+        val playing: HashMap<Long, Double> = HashMap(),
+        val prepare: HashSet<Long> = HashSet(),
+        var operateTimeMs: Long = System.currentTimeMillis(),
+        var level: Cytus2Level? = null
 ) {
     @Contextual
     @Transient
@@ -106,7 +106,7 @@ internal data class ArenaContext(
 
 @Serializable
 internal data class ArenaContexts(
-    val contextMap: HashMap<Long, ArenaContext> = HashMap()
+        val contextMap: HashMap<Long, ArenaContext> = HashMap()
 )
 
 internal object ArenaBotData : AutoSavePluginData("ArenaBotData") {
@@ -157,9 +157,9 @@ internal object ArenaBotData : AutoSavePluginData("ArenaBotData") {
      * @param remove    若存在是否移除
      */
     private fun getContext(
-        arenaId: Long,
-        createNew: Boolean = false,
-        remove: Boolean = false,
+            arenaId: Long,
+            createNew: Boolean = false,
+            remove: Boolean = false,
     ): ArenaContext? = mutex.write {
         // 先清理
         clearContext()
@@ -229,8 +229,8 @@ internal object ArenaBotData : AutoSavePluginData("ArenaBotData") {
                 return listOf("未抽取歌曲")
             }
 
-            if (score > 100) return listOf("成绩无效 ($score)")
-            if (score < 80) return listOf("成绩过低 无法上传 ($score)")
+            if (score > 100) return listOf(String.format("成绩无效 (%.2f)", score))
+            if (score < 80) return listOf(String.format("成绩过低 无法上传 (%.2f)", score))
 
             // 重置超时
             ctx.operateTimeMs = System.currentTimeMillis()
@@ -238,7 +238,7 @@ internal object ArenaBotData : AutoSavePluginData("ArenaBotData") {
 
             WhitelistsData.sampling(WhitelistsData.Feature.ARENA, arenaId)
             val res = ArrayList<String>()
-            res.add("成绩提交成功 ($score)")
+            res.add(String.format("成绩提交成功 (%.2f)", score))
             res.addAll(ctx.tryCalculateResult(bot))
             return res
         }

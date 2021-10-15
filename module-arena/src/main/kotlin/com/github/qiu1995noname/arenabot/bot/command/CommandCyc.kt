@@ -30,8 +30,8 @@ object CommandCyc : SimpleCommand(
         val perfectActual: Int = perfect - greatActual
         val tpActual: Double = 100.0 * (1.0 * perfectActual + 0.7 * greatActual + 0.3 * good) / all
         val tpDiff = abs(tp - tpActual)
-        return "$perfectActual / $greatActual / $good / $bad / $miss\nTP: $tpActual" +
-                (if (tpDiff > 0.1) "\n过大的TP偏差: $tpDiff" else "") +
+        return "$perfectActual / $greatActual / $good / $bad / $miss\nTP: ${String.format("%.4f", tpActual)}" +
+                (if (tpDiff > 0.1) "\n过大的TP偏差: ${String.format("%.4f", tpDiff)}" else "") +
                 (if (greatActual < 0) "\n不可能的游戏结果" else "")
     }
 
