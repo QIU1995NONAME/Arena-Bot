@@ -6,8 +6,10 @@ import net.mamoe.mirai.console.data.AutoSavePluginData
 import net.mamoe.mirai.console.data.value
 
 object WhitelistsData : AutoSavePluginData(
-    WhitelistsData::class.simpleName!!
+        WhitelistsData::class.simpleName!!
 ) {
+    private const val MS_PER_DAY = 1000L * 60 * 60 * 24
+
     enum class Feature {
         ARENA,
         SONG_SELECT,
@@ -18,13 +20,23 @@ object WhitelistsData : AutoSavePluginData(
      */
     @Serializable
     data class Statistics(
-        // 功能名 -> Map(群号 -> Set(使用时刻))
-        val counts: HashMap<String, HashMap<Long, HashSet<Long>>> = HashMap(),
+            // 功能名 -> Map(群号 -> Set(使用时刻))
+            val counts: HashMap<String, HashMap<Long, HashSet<Long>>> = HashMap(),
     )
 
     private val statistics by value<Statistics>()
 
+    private fun removeOldData() = synchronized(this) {
+        val now = System.currentTimeMillis() / MS_PER_DAY * MS_PER_DAY
+        statistics.counts.forEach { (_, map) ->
+            map.forEach { (_, set) ->
+                set.removeIf { it < now - MS_PER_DAY * 30 }
+            }
+        }
+    }
+
     fun summary(bot: Bot?, dayCount: Int = 7): String = synchronized(this) {
+        removeOldData()
         val days = if (dayCount < 3) 3 else dayCount
         val builder = StringBuilder()
         val now = System.currentTimeMillis()
@@ -49,7 +61,7 @@ object WhitelistsData : AutoSavePluginData(
             map.filter { entry ->
                 entry.key in WhitelistsConfig.grantedSets.allowedGroups
             }.forEach { (groupId, samples) ->
-                val res = samples.filter { it > now - 1000L * 60 * 60 * 24 * days }.size
+                val res = samples.filter { it > now - MS_PER_DAY * days }.size
                 if (res != 0) {
                     resMap[groupId] = res
                 }
@@ -83,6 +95,7 @@ object WhitelistsData : AutoSavePluginData(
      * @param groupId 群号
      */
     fun sampling(feature: Feature, groupId: Long): Unit = synchronized(this) {
+        removeOldData()
         if (feature.name !in statistics.counts.keys) {
             statistics.counts[feature.name] = HashMap()
         }
