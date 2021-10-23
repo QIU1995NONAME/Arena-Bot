@@ -13,7 +13,7 @@ import net.mamoe.mirai.message.data.MessageChain
 object CommandArena : RawCommand(
         ArenaBotPlugin,
         "arena",
-        "加入竞技", "竞技", "击剑", "競技", "擊劍", "加入競技",
+        "加入竞技", "竞技", "击剑", "競技", "擊劍", "加入競技", "\uD83E\uDD3A",
         description = "启动/加入竞技模式",
 ) {
     override suspend fun CommandSender.onCommand(args: MessageChain) {
