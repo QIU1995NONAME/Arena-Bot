@@ -21,6 +21,7 @@ INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Hans', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Ilka', '["il"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Ivy', '[]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('JOE', '["细菌王"]');
+INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Kaf', '["花谱"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Kizuna AI', '["爱酱", "绊爱", "AI"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Miku', '["初音", "初音未来"]');
 INSERT INTO `cytus2-actor` (id, nicknames) VALUES ('Neko', '["小Neko"]');
