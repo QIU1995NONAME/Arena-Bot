@@ -13,7 +13,7 @@ object ArenaBotConfig : AutoSavePluginConfig(
         val port: Int = 13306,
         val dbName: String = "arena-data-dev",
         val dbUser: String = "arena-bot",
-        val dbPass: String = "arena-secret",
+        val dbPass: String = "arena-bot",
     )
 
     val database by value<DatabaseConfig>()
