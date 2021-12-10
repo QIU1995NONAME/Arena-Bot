@@ -13,6 +13,7 @@ object WhitelistsData : AutoSavePluginData(
     enum class Feature {
         ARENA,
         SONG_SELECT,
+        CYC,
     }
 
     /**
@@ -75,15 +76,15 @@ object WhitelistsData : AutoSavePluginData(
                 }
                 builder.append("\n")
             }
-            // 找到所有白名单内无记录的群
-            WhitelistsConfig.grantedSets.allowedGroups.filter { it !in resMap }.forEach {
-                builder.append("  0  $it")
-                if (bot != null) {
-                    val groupName = bot.getGroup(it)?.name ?: "不在该群"
-                    builder.append(" (${groupName})")
-                }
-                builder.append("\n")
-            }
+            //            // 找到所有白名单内无记录的群
+            //            WhitelistsConfig.grantedSets.allowedGroups.filter { it !in resMap }.forEach {
+            //                builder.append("  0  $it")
+            //                if (bot != null) {
+            //                    val groupName = bot.getGroup(it)?.name ?: "不在该群"
+            //                    builder.append(" (${groupName})")
+            //                }
+            //                builder.append("\n")
+            //            }
         }
         return builder.toString()
     }

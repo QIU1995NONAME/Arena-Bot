@@ -1,8 +1,12 @@
 package com.github.qiu1995noname.arenabot.bot.command
 
 import com.github.qiu1995noname.arenabot.bot.ArenaBotPlugin
+import com.github.qiu1995noname.arenabot.whitelists.WhitelistsData
 import net.mamoe.mirai.console.command.CommandSender
+import net.mamoe.mirai.console.command.GroupAwareCommandSender
+import net.mamoe.mirai.console.command.MemberCommandSender
 import net.mamoe.mirai.console.command.SimpleCommand
+import net.mamoe.mirai.event.events.GroupMemberEvent
 import kotlin.math.abs
 import kotlin.math.floor
 
@@ -38,18 +42,27 @@ object CommandCyc : SimpleCommand(
     @Suppress("unused")
     @Handler
     suspend fun CommandSender.onCommand(tp: Double, perfect: Int) {
+        if (this is MemberCommandSender) {
+            WhitelistsData.sampling(WhitelistsData.Feature.CYC, this.group.id)
+        }
         sendMessage(process(tp, perfect, 0, 0, 0))
     }
 
     @Suppress("unused")
     @Handler
     suspend fun CommandSender.onCommand(tp: Double, perfect: Int, good: Int) {
+        if (this is MemberCommandSender) {
+            WhitelistsData.sampling(WhitelistsData.Feature.CYC, this.group.id)
+        }
         sendMessage(process(tp, perfect, good, 0, 0))
     }
 
     @Suppress("unused")
     @Handler
     suspend fun CommandSender.onCommand(tp: Double, perfect: Int, good: Int, bad: Int, miss: Int) {
+        if (this is MemberCommandSender) {
+            WhitelistsData.sampling(WhitelistsData.Feature.CYC, this.group.id)
+        }
         sendMessage(process(tp, perfect, good, bad, miss))
     }
 }
