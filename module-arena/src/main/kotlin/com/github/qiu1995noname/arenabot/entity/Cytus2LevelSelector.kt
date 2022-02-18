@@ -1,5 +1,6 @@
 package com.github.qiu1995noname.arenabot.entity
 
+import java.util.*
 import java.util.regex.Pattern
 
 class Cytus2LevelSelector {
@@ -67,30 +68,30 @@ class Cytus2LevelSelector {
             maxDifficulty = (str.toDouble() * 100 + 50).toInt()
             minDifficulty = maxDifficulty - 100
         } else if (
-                Pattern.matches("HARD", str.toUpperCase()) ||
+                Pattern.matches("HARD", str.uppercase(Locale.getDefault())) ||
                 Pattern.matches("困难", str) ||
                 Pattern.matches("困難", str)
         ) {
             type = Cytus2Level.Type.HARD
         } else if (
-                Pattern.matches("CHAOS", str.toUpperCase()) ||
+                Pattern.matches("CHAOS", str.uppercase(Locale.getDefault())) ||
                 Pattern.matches("混沌", str)
         ) {
             type = Cytus2Level.Type.CHAOS
         } else if (
-                Pattern.matches("GLITCH", str.toUpperCase()) ||
+                Pattern.matches("GLITCH", str.uppercase(Locale.getDefault())) ||
                 Pattern.matches("混乱", str) ||
                 Pattern.matches("混亂", str)
         ) {
             type = Cytus2Level.Type.GLITCH
         } else if (
-                Pattern.matches("FREE", str.toUpperCase()) ||
+                Pattern.matches("FREE", str.uppercase(Locale.getDefault())) ||
                 Pattern.matches("免费", str) ||
                 Pattern.matches("免費", str)
         ) {
             freeOnly = true
         } else if (
-                Pattern.matches("DELETED", str.toUpperCase()) ||
+                Pattern.matches("DELETED", str.uppercase(Locale.getDefault())) ||
                 Pattern.matches("已移除", str) ||
                 Pattern.matches("已刪除", str)
         ) {

@@ -48,7 +48,7 @@ object AutoReplyCache {
                 // TODO
                 //     cook it
                 //     目前就直接发出去了
-                contact.sendMessage(contact.uploadVoice(it))
+                contact.sendMessage(contact.uploadAudio(it))
             }
         }
         return builder.build()

@@ -1,13 +1,13 @@
 @Suppress("MemberVisibilityCanBePrivate")
 object Versions {
     object Kotlin {
-        const val lang = "1.5.+"
+        const val lang = "1.6.+"
         const val ktor = "1.6.+"
         const val serialization = "1.3.+"
     }
 
     object Mirai {
-        const val core = "2.5.+"
+        const val core = "2.10.+"
         const val console = core
     }
 
