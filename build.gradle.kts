@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral()
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-serialization")
@@ -11,7 +11,7 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral()
         maven {
             url = uri("https://repo.spongepowered.org/maven")
         }
